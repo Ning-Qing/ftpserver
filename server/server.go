@@ -79,7 +79,7 @@ func (s *Server) GetSettings() (*serverlib.Settings, error) {
 		ListenAddr:               conf.ListenAddress,
 		PublicHost:               conf.PublicHost,
 		PassiveTransferPortRange: portRange,
-		EnableHASH:               conf.Options.EnableHASH,
+		EnableHASH:               conf.Extensions.EnableHASH,
 	}, nil
 }
 

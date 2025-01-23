@@ -44,8 +44,8 @@ type ServerCert struct {
 	Key  string `json:"key"`  // Private key
 }
 
-// Options define some optional features
-type Options struct {
+// Extensions define the relevant configurations for extended features
+type Extensions struct {
 	EnableHASH bool `json:"enable_hash"` // Enable support for calculating hash value of files
 }
 
@@ -58,7 +58,7 @@ type Content struct {
 	HashPlaintextPasswords   bool       `json:"hash_plaintext_passwords"`    // Overwrite plain-text passwords with hashed equivalents
 	Accesses                 []*Access  `json:"accesses"`                    // Accesses offered to users
 	PassiveTransferPortRange *PortRange `json:"passive_transfer_port_range"` // Listen port range
-	Options                  Options    `json:"options"`                     // Optional feature items
+	Extensions               Extensions `json:"extensions"`                  // Extended features
 	Logging                  Logging    `json:"logging"`                     // Logging parameters
 	TLS                      *TLS       `json:"tls"`
 }
